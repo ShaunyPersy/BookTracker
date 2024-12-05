@@ -18,7 +18,7 @@ namespace API.Migrations
                 name: "Book",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -31,7 +31,7 @@ namespace API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Book", x => x.ID);
+                    table.PrimaryKey("PK_Book", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }

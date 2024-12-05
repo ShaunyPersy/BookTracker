@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Project\\Project\\Project\\Project.csproj": {}
+    "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Project\\Project\\Project\\Project.csproj": {
+    "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Project\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Project\\Project\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\shaun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Project\\Project\\Project\\obj\\",
+        "outputPath": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

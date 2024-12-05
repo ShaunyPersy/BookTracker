@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|c:\\users\\shaun\\documents\\school\\fase 3\\c net\\labo\\c--project\\project\\components\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|solutionrelative:project\\components\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|c:\\users\\shaun\\documents\\school\\fase 3\\c net\\labo\\c--project\\project\\components\\addpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|solutionrelative:project\\components\\addpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|c:\\users\\shaun\\documents\\school\\fase 3\\c net\\labo\\c--project\\project\\components\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|solutionrelative:project\\components\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|c:\\users\\shaun\\documents\\school\\fase 3\\c net\\labo\\c--project\\project\\components\\addbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|solutionrelative:project\\components\\addbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|c:\\users\\shaun\\documents\\school\\fase 3\\c net\\labo\\c--project\\project\\components\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6FB604-C6C2-4DAA-9F1B-451FF12D41C1}|Project\\Project.csproj|solutionrelative:project\\components\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPage.xaml",
+              "DocumentMoniker": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddPage.xaml",
+              "RelativeDocumentMoniker": "Project\\Components\\AddPage.xaml",
+              "ToolTip": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddPage.xaml",
+              "RelativeToolTip": "Project\\Components\\AddPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T08:12:55.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\EditPage.xaml",
+              "RelativeDocumentMoniker": "Project\\Components\\EditPage.xaml",
+              "ToolTip": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\EditPage.xaml",
+              "RelativeToolTip": "Project\\Components\\EditPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T08:12:07.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\Book.cs",
+              "RelativeDocumentMoniker": "Project\\Components\\Book.cs",
+              "ToolTip": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\Book.cs",
+              "RelativeToolTip": "Project\\Components\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:07:31.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddBookViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddBookViewModel.cs",
+              "RelativeDocumentMoniker": "Project\\Components\\AddBookViewModel.cs",
+              "ToolTip": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddBookViewModel.cs",
+              "RelativeToolTip": "Project\\Components\\AddBookViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:01:36.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddPage.xaml.cs",
+              "RelativeDocumentMoniker": "Project\\Components\\AddPage.xaml.cs",
+              "ToolTip": "C:\\Users\\shaun\\Documents\\School\\Fase 3\\C Net\\Labo\\C--project\\Project\\Components\\AddPage.xaml.cs",
+              "RelativeToolTip": "Project\\Components\\AddPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T08:01:20.44Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

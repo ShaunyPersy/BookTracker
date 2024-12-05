@@ -1,26 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using Project.Components.Db;
 
 namespace Project.Components
 {
-    internal class BooksViewModel
+    internal class BooksViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Book> Books { get; set; }
+        private ObservableCollection<Book> _books;
+        public ObservableCollection<Book> Books
+        {
+            get => _books;
+            set
+            {
+                _books = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private readonly ApiDataStore apiDataStore;
+
         public BooksViewModel()
         {
-            Books = new ObservableCollection<Book>
+            apiDataStore = new ApiDataStore();
+            Books = new ObservableCollection<Book>();
+        }
+
+        public async Task LoadBooksAsync()
         {
-            new Book { Title = "To Kill a Mockingbird", Author = "Harper Lee", Status = "Completed", Rating = 5, Page = null },
-            new Book { Title = "1984", Author = "George Orwell", Status = "Reading", Rating = null, Page = 187 },
-            new Book { Title = "Moby-Dick", Author = "Herman Melville", Status = "Not Started", Rating = null, Page = null },
-            new Book { Title = "The Great Gatsby", Author = "F. Scott Fitzgerald", Status = "Completed", Rating = 4, Page = null },
-            new Book { Title = "War and Peace", Author = "Leo Tolstoy", Status = "Reading", Rating = null, Page = 512 },
-            new Book { Title = "Pride and Prejudice", Author = "Jane Austen", Status = "Completed", Rating = 5, Page = null }
-        };
+            try
+            {
+                var _books = await apiDataStore.GetBooksAsync();
+                if (_books != null)
+                {
+                    Books.Clear();
+                    foreach (var book in _books)
+                    {
+                        Books.Add(book);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading books: {ex.Message}");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

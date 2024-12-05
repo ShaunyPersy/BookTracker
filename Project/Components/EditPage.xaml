@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Project.Components.RatingSource"
              x:Class="Project.Components.EditPage.EditPage"
              Title="Edit Book">
 
@@ -8,18 +9,21 @@
         <Label Text="Edit Book" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
 
         <Label Text="Title:"/>
-        <Entry Text="{Binding Book.Title}" Placeholder="Title" />
+        <Entry Text="{Binding Book.title}" Placeholder="Title" />
 
         <Label Text="Author:"/>
-        <Entry Text="{Binding Book.Author}" Placeholder="Author" />
+        <Entry Text="{Binding Book.author}" Placeholder="Author" />
 
-        <Label Text="Rating:" IsVisible="{Binding Book.ShowRating}"/>
-        <Entry Text="{Binding Book.Rating}" Keyboard="Numeric" Placeholder="Rating (1-5)" IsVisible="{Binding Book.ShowRating}"/>
-        
+        <Picker 
+            Title="Rating:" 
+            ItemsSource="{x:Static local:RatingSource.RatingValues}" 
+            SelectedItem="{Binding Book.rating}"
+            IsVisible="{Binding Book.showRating}"/>
+
         <Picker x:Name="picker"
-        Title="Status:"
-        SelectedItem="{Binding Book.Status}"
-        SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            Title="Status:"
+            SelectedItem="{Binding Book.status}"
+            SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Completed</x:String>
@@ -29,13 +33,13 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <Label Text="Page:" IsVisible="{Binding Book.ShowPage}"/>
-        <Editor Text="{Binding Book.Page}" Placeholder="Page" Keyboard="Numeric" IsVisible="{Binding Book.ShowPage}"/>
+        <Label Text="Page:" IsVisible="{Binding Book.showPage}"/>
+        <Editor Text="{Binding Book.page}" Placeholder="Page" Keyboard="Numeric" IsVisible="{Binding Book.showPage}"/>
 
         <HorizontalStackLayout Padding="20" HorizontalOptions="Center">
             <Button Text="Cancel" Margin="5" Clicked="OnCancelButtonClicked"/>
-            <Button Text="Save" Margin="5" />
+            <Button Text="Save" Margin="5" Clicked="OnSave"/>
         </HorizontalStackLayout>
-        <Button Text="Delete" Clicked="OnDeleteButtonClicked"/>
+        <Button Text="Delete" Clicked="OnDelete"/>
     </VerticalStackLayout>
 </ContentPage>

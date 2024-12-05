@@ -12,18 +12,14 @@ namespace API.Controllers {
 
     public class BooksController : ControllerBase {
         private readonly IApiRepo repository;
-        private readonly IMapper mapper;
+        //private readonly IMapper mapper;
         public BooksController(IApiRepo repo, IMapper map){
             repository = repo;
-            mapper = map;
+            //mapper = map;
         }
 
         [HttpGet]
-        public ActionResult GetAllBooks(){
-            return Ok();
-        }
-
-        /*public ActionResult<IEnumerable<BookReadDto>> GetAllBooks()
+        public ActionResult<IEnumerable<BookReadDto>> GetAllBooks()
         {
             var booksList = repository.GetAllBooks();
             var bookDtos = new List<BookReadDto>();
@@ -43,7 +39,7 @@ namespace API.Controllers {
             }
 
             return Ok(bookDtos);
-        }*/
+        }
 
         [HttpGet("{id}", Name ="GetBookById")]
         public ActionResult<BookReadDto> GetBookById(int id)

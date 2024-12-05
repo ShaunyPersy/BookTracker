@@ -9,9 +9,11 @@ namespace API.Services {
 
         public MySqlAPIRepo(APIContext context){
             _context = context;
+            System.Console.WriteLine(_context);
         }
         public IEnumerable<Book> GetAllBooks()
         {
+            Console.WriteLine("Fetching all books...");
             return _context.Book.ToList();
         }
 

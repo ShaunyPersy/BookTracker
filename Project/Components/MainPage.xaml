@@ -31,34 +31,34 @@
 
                                         <!-- Book Title -->
                                         <Label Grid.Column="1"
-                                               Text="{Binding Title}"
+                                               Text="{Binding title}"
                                                FontSize="18"
                                                FontAttributes="Bold" />
 
                                         <!-- Author Name -->
                                         <Label Grid.Row="1"
                                                Grid.Column="1"
-                                               Text="{Binding Author, StringFormat='by {0}'}"
+                                               Text="{Binding author, StringFormat='by {0}'}"
                                                FontAttributes="Italic" />
 
                                         <!-- Reading Status -->
                                         <Label Grid.Row="2"
                                                Grid.Column="1"
-                                               Text="{Binding Status, StringFormat='Status: {0}'}"
+                                               Text="{Binding status, StringFormat='Status: {0}'}"
                                                TextColor="Gray" />
 
                                         <!-- Rating (only displayed if completed) -->
                                         <Label Grid.Row="3"
                                                Grid.Column="1"
-                                               Text="{Binding Rating, StringFormat='Rating: {0}'}"
-                                               IsVisible="{Binding ShowRating}" />
+                                               Text="{Binding rating, StringFormat='Rating: {0}'}"
+                                               IsVisible="{Binding showRating}" />
 
                                         <!-- Page Number -->
                                         <Label Grid.Row="4"
                                                Grid.Column="1"
-                                               Text="{Binding Page, StringFormat='Page: {0}'}"
+                                               Text="{Binding page, StringFormat='Page: {0}'}"
                                                TextColor="Gray"
-                                               IsVisible="{Binding ShowPage}"/>
+                                               IsVisible="{Binding showPage}"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>

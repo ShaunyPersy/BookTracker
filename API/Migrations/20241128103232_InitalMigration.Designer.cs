@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(APIContext))]
-    [Migration("20241109102358_InitalMigration")]
+    [Migration("20241128103232_InitalMigration")]
     partial class InitalMigration
     {
         /// <inheritdoc />
@@ -27,11 +27,11 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Models.Book", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Author")
                         .IsRequired()
@@ -51,7 +51,7 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Book");
                 });

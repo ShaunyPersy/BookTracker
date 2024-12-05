@@ -24,11 +24,11 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Models.Book", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Author")
                         .IsRequired()
@@ -48,7 +48,7 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Book");
                 });

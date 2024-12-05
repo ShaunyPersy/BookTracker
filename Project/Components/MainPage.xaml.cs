@@ -10,7 +10,14 @@ namespace Project
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = vm = new BooksViewModel();
+            vm = new BooksViewModel();
+            BindingContext = vm;
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await vm.LoadBooksAsync();
         }
 
         private async void OnItemTapped(object sender, ItemTappedEventArgs e)
@@ -26,5 +33,4 @@ namespace Project
             await Navigation.PushAsync(new AddPage());
         }
     }
-
 }

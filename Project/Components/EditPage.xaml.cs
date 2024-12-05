@@ -7,17 +7,10 @@ namespace Project.Components.EditPage
     public partial class EditPage : ContentPage
     {
         EditBookViewModel vm;
-        public Command SaveBttn {  get; } 
         public EditPage(Book selectedBook)
         {
             InitializeComponent();
             BindingContext = vm = new EditBookViewModel(selectedBook);
-
-            SaveBttn = new Command(EditBook);
-        }
-        private void EditBook()
-        {
-
         }
 
         private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
@@ -28,16 +21,20 @@ namespace Project.Components.EditPage
             switch (selectedStatus)
             {
                 case "Completed":
-                    vm.Book.ShowPage = false;
-                    vm.Book.ShowRating = true;
+                    vm.Book.showPage = false;
+                    vm.Book.page = null;
+                    vm.Book.showRating = true;
                     break;
                 case "Reading":
-                    vm.Book.ShowPage = true;
-                    vm.Book.ShowRating = false;
+                    vm.Book.showPage = true;
+                    vm.Book.showRating = false;
+                    vm.Book.rating = null;
                     break;
                 case "Not started":
-                    vm.Book.ShowPage = false;
-                    vm.Book.ShowRating = false;
+                    vm.Book.showPage = false;
+                    vm.Book.page = null;
+                    vm.Book.showRating = false;
+                    vm.Book.rating = null;
                     break;
             }
         }
@@ -52,13 +49,26 @@ namespace Project.Components.EditPage
             }
         }
 
-        private async void OnDeleteButtonClicked(object sender, EventArgs e)
+        private async void OnSave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(vm.Book.title) || string.IsNullOrWhiteSpace(vm.Book.author) || string.IsNullOrWhiteSpace(vm.Book.status))
+            {
+                await DisplayAlert("Validation Error", "Please fill in all fields (Title, Author, Status).", "OK");
+                return;
+            }
+
+            await vm.OnSave();
+            await Navigation.PopAsync();
+        }
+
+        private async void OnDelete(object sender, EventArgs e)
         {
             bool isConfirmed = await DisplayAlert("Confirm Delete", "Are you sure you want to delete this book?", "Yes", "No");
 
             if (isConfirmed)
             {
-                //DeleteBook();
+                await vm.onDelete();
+                await Navigation.PopAsync();
             }
         }
     }

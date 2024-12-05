@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Project.Components
 {
@@ -12,14 +6,15 @@ namespace Project.Components
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public int? Rating { get; set; }
-        public int? Page { get; set; }
+        public int id { get; set; }
+        public string title { get; set; }
+        public string author { get; set; }
+        public int? rating { get; set; }
+        public int? page { get; set; }
 
         private string _status;
 
-        public string Status
+        public string status
         {
             get => _status;
             set
@@ -27,14 +22,14 @@ namespace Project.Components
                 if (_status != value)
                 {
                     _status = value;
-                    OnPropertyChanged(nameof(Status));
+                    OnPropertyChanged(nameof(status));
                     OnStatusChanged();
                 }
             }
         }
 
         private bool _showRating;
-        public bool ShowRating
+        public bool showRating
         {
             get => _showRating;
             set
@@ -42,13 +37,13 @@ namespace Project.Components
                 if (_showRating != value)
                 {
                     _showRating = value;
-                    OnPropertyChanged(nameof(ShowRating));
+                    OnPropertyChanged(nameof(showRating));
                 }
             }
         }
 
         private bool _showPage;
-        public bool ShowPage
+        public bool showPage
         {
             get => _showPage;
             set
@@ -56,15 +51,15 @@ namespace Project.Components
                 if (_showPage != value)
                 {
                     _showPage = value;
-                    OnPropertyChanged(nameof(ShowPage));
+                    OnPropertyChanged(nameof(showPage));
                 }
             }
         }
 
         private void OnStatusChanged()
         {
-            ShowRating = Status == "Completed";
-            ShowPage = Status == "Reading";
+            showRating = status == "Completed";
+            showPage = status == "Reading";
         }
         protected void OnPropertyChanged(string propertyName)
         {

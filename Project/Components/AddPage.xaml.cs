@@ -5,7 +5,9 @@ namespace Project.Components.AddPage;
 public partial class AddPage : ContentPage
 {
     AddBookViewModel vm;
-	public AddPage()
+    public static List<int> RatingValues => new() { 1, 2, 3, 4, 5 };
+
+    public AddPage()
 	{
 		InitializeComponent();
         BindingContext = vm = new AddBookViewModel();
@@ -21,6 +23,22 @@ public partial class AddPage : ContentPage
         }
     }
 
+    private async void OnSave(object sender, EventArgs e)
+    {
+        if (string.IsNullOrWhiteSpace(vm.Book.title) || string.IsNullOrWhiteSpace(vm.Book.author) || string.IsNullOrWhiteSpace(vm.Book.status))
+        {
+            await DisplayAlert("Validation Error", "Please fill in all fields (Title, Author, Status).", "OK");
+            return;
+        }
+
+        var success = await vm.AddBookAsync();
+
+        if (success)
+        {
+            await Navigation.PopAsync();
+        }
+    }
+
     private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
@@ -29,16 +47,20 @@ public partial class AddPage : ContentPage
         switch (selectedStatus)
         {
             case "Completed":
-                vm.Book.ShowPage = false;
-                vm.Book.ShowRating = true;
+                vm.Book.showPage = false;
+                vm.Book.page = null;
+                vm.Book.showRating = true;
                 break;
             case "Reading":
-                vm.Book.ShowPage = true;
-                vm.Book.ShowRating = false;
+                vm.Book.showPage = true;
+                vm.Book.showRating = false;
+                vm.Book.rating = null;
                 break;
             case "Not started":
-                vm.Book.ShowPage = false;
-                vm.Book.ShowRating = false;
+                vm.Book.showPage = false;
+                vm.Book.page = null;
+                vm.Book.showRating = false;
+                vm.Book.rating = null;
                 break;
         }
     }
