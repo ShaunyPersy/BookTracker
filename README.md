@@ -54,3 +54,8 @@ To run the application locally, use the following command:
 
 ```bash
 dotnet run
+```
+
+## Demo
+https://github.com/user-attachments/assets/1e3a3b61-6d47-4974-8a78-8b65a4b5b321
+
